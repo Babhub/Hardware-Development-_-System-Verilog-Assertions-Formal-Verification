@@ -1,0 +1,23 @@
+# AEP TCL script for VC Formal
+set_fml_appmode AEP
+set_app_var fml_mode_on true
+
+# Read design
+read_file -format sverilog -top aep_top -f filelist
+
+# Set clock and reset
+set_clock clk -period 1000
+set_reset rst -active high
+
+# Elaborate with AEP
+elaborate -aep
+
+# Simulate reset state and save it
+sim_run -stable
+sim_save_reset
+
+# Run formal analysis
+check_fv
+
+# Report results
+report_fv -list > output/results_aep.txt

@@ -1,0 +1,54 @@
+`timescale 1ns / 1ps
+
+module traffic_light_tb;
+
+    // Inputs
+    reg clk;
+    reg reset_n;
+
+    // Outputs
+    wire ns_green, ns_yellow, ns_red;
+    wire ew_green, ew_yellow, ew_red;
+
+    // Instantiate the FSM module with correct name
+    traffic_light_controller uut (
+        .clk(clk),
+        .reset_n(reset_n),
+        .ns_green(ns_green),
+        .ns_yellow(ns_yellow),
+        .ns_red(ns_red),
+        .ew_green(ew_green),
+        .ew_yellow(ew_yellow),
+        .ew_red(ew_red)
+    );
+
+    // Clock generation: 10ns period
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    // Reset sequence
+    initial begin
+        reset_n = 0;
+        @(posedge clk);
+        @(posedge clk);
+        reset_n = 1;
+
+        // Run simulation for a few cycles
+        #500;
+
+        // End simulation
+        $finish;
+    end
+
+    // Monitor outputs
+    initial begin
+        $monitor("Time=%0t | NS: G=%b Y=%b R=%b | EW: G=%b Y=%b R=%b",
+                 $time, ns_green, ns_yellow, ns_red, ew_green, ew_yellow, ew_red);
+    end
+
+    // Waveform dumping
+    initial begin
+        $vcdpluson;
+    end
+
+endmodule

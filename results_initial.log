@@ -1,0 +1,14 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+
+Warning-[MTMIGNORE] MTM ignored
+  +maxdelays ignored because +allmtm was not used at compile-time
+           typical delays (as specified at compile-time) are in effect
+
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP2_Full64; Runtime version W-2024.09-SP2_Full64;  Aug  9 14:12 2025
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0
+CPU Time:      0.330 seconds;       Data structure size:   0.0Mb
+Sat Aug  9 14:12:32 2025

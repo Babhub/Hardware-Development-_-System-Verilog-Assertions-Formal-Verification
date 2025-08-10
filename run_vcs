@@ -1,0 +1,4 @@
+#!/bin/bash
+vcs -l compile.log -sverilog -lca -debug_all -full64 -timescale=1ns/1ps -f File.vlist
+./simv -l sim.log +vcs+lic+wait
+dve -vpd vcdplus.vpd &

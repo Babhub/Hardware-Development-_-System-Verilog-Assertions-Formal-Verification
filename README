@@ -1,0 +1,75 @@
+AEP Lab Assignment – VC Formal
+
+Student Information
+
+Student Username: sv111610
+Platform Used: VLSI01 (Linux-based environment)
+Tool: Synopsys VC Formal (Version W-2024.09-SP2)
+
+Project Description
+
+This project demonstrates the use of Advanced Electrical Properties (AEP) checks using Synopsys VC Formal. The RTL design includes modules that intentionally exhibit design issues like:
+
+Parallel and full case mismatches
+X-propagation
+Multiple drivers
+Out-of-bounds memory access
+Floating signals
+
+These are checked and analyzed using VC Formal in AEP mode.
+
+Folder Structure
+
+```bash
+aep_lab/
+├── filelist              # Filelist of all RTL files
+├── test.tcl              # Main TCL script to run AEP check
+├── results_aep.txt       # AEP results output file
+└── rtl/                  # Folder with all design RTL modules
+    ├── aep_bounds.v
+    ├── aep_float.v
+    ├── aep_full.v
+    ├── aep_multi.v
+    ├── aep_parallel.v
+    ├── aep_top.v
+    └── aep_x.v
+
+File Paths (as per submission requirements)
+
+TCL Script: ~/Desktop/HW6/aep_lab/test.tcl
+
+Output Results: ~/Desktop/HW6/aep_lab/results_aep.txt
+
+To run the project,
+
+Opened the terminal and went to the project directly 
+
+cd ~/Desktop/HW6/aep_lab
+
+To run the VC formal tool with the TCL script:
+vcf -f test.tcl
+
+test.tcl Summary
+
+The TCL script performs the following:
+
+Sets the VC Formal mode to AEP
+
+Reads the RTL file list from filelist
+
+Sets aep_top as the top module
+
+Specifies clock (clk) and reset (resetn) signals
+
+Simulates for 10ns and sets up initial state
+
+Launches AEP checks and writes results to results_aep.txt
+
+
+
+
+
+
+
+
+

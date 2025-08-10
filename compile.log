@@ -1,0 +1,48 @@
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all+dmptf -debug_region+cell+encrypt' instead.
+
+Command: vcs -l compile.log -sverilog -lca -debug_all -full64 -timescale=1ns/1ps \
+-f File.vlist
+                         Chronologic VCS (TM)
+       Version W-2024.09-SP2_Full64 -- Sun Jul 27 16:47:30 2025
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all -debug_region+cell+encrypt' instead.
+
+Parsing design file 'Verilog'
+
+Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  "Verilog", 15: token is 'always'
+  always @(posedge clk or negedge reset_n) begin
+        ^
+
+2 warnings
+1 error
+CPU time: .154 seconds to compile

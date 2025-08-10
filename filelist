@@ -1,0 +1,7 @@
+rtl/aep_top.v
+rtl/aep_full.v
+rtl/aep_parallel.v
+rtl/aep_bounds.v
+rtl/aep_x.v
+rtl/aep_multi.v
+rtl/aep_float.v
