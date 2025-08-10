@@ -42,7 +42,6 @@ By the end, you will have explored **assertion-based verification** from basic s
 - **Simulation:** Synopsys VCS  
 - **Formal Verification:** Synopsys VC Formal
 
-- 
 ---
 Portfolio by *Bab* — demonstrating practical and theoretical expertise in **SystemVerilog Assertions** and **Formal Verification**.
 
